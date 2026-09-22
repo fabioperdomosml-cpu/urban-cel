@@ -26,7 +26,7 @@ const products = [
     rating: 4.6,
     price: 520000,
     description: 'Un celular confiable con gran pantalla y batería para todo el día.',
-    image: 'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=900&q=80',
+    image: 'https://hartunning.com.mx/wp-content/uploads/2024/05/01-SAMSUNG-A15-modelos-SM-A155MN.webp',
     featured: true,
   },
   {
@@ -36,7 +36,7 @@ const products = [
     rating: 4.6,
     price: 590000,
     description: 'Diseño moderno, buen rendimiento y almacenamiento para tus aplicaciones.',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80',
+    image: 'https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/a20-a3x/listpage/427-600-blue.png',
     featured: true,
   },
   {
@@ -46,7 +46,7 @@ const products = [
     rating: 4.9,
     price: 1390000,
     description: 'Consola compacta de nueva generación para disfrutar tus juegos favoritos.',
-    image: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=900&q=80',
+    image: 'https://www.presse-citron.net/app/uploads/2021/11/xbox-series-s-microsoft.png',
     featured: true,
   },
 ];
