@@ -6,7 +6,7 @@ const products = [
     rating: 4.8,
     price: 1200000,
     description: 'Rendimiento potente, cámara avanzada y diseño elegante.',
-    icon: '📱',
+    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80',
     featured: true,
   },
   {
@@ -16,7 +16,7 @@ const products = [
     rating: 4.7,
     price: 600000,
     description: 'Pantalla amplia, batería duradera y excelente experiencia diaria.',
-    icon: '📱',
+    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=80',
     featured: true,
   },
   {
@@ -26,7 +26,7 @@ const products = [
     rating: 4.6,
     price: 520000,
     description: 'Un celular confiable con gran pantalla y batería para todo el día.',
-    icon: '📱',
+    image: 'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=900&q=80',
     featured: true,
   },
   {
@@ -36,7 +36,7 @@ const products = [
     rating: 4.6,
     price: 590000,
     description: 'Diseño moderno, buen rendimiento y almacenamiento para tus aplicaciones.',
-    icon: '📱',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80',
     featured: true,
   },
   {
@@ -46,7 +46,7 @@ const products = [
     rating: 4.9,
     price: 1390000,
     description: 'Consola compacta de nueva generación para disfrutar tus juegos favoritos.',
-    icon: '🎮',
+    image: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=900&q=80',
     featured: true,
   },
 ];
@@ -97,7 +97,9 @@ const addToCart = (productId) => {
 
 const renderProductCard = (product) => `
   <article class="product-card" data-id="${product.id}">
-    <div class="product-image">${product.icon}</div>
+    <div class="product-image">
+      <img src="${product.image}" alt="${product.name}" />
+    </div>
     <div class="product-body">
       <div class="product-topline">
         <span class="product-tag">${product.category}</span>

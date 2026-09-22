@@ -34,7 +34,9 @@ const renderCartItems = () => {
     .map(
       (item) => `
         <article class="cart-item">
-          <div class="cart-item-thumb">${item.icon}</div>
+          <div class="cart-item-thumb">
+            <img src="${item.image}" alt="${item.name}" />
+          </div>
           <div>
             <h3>${item.name}</h3>
             <p>${item.category}</p>
