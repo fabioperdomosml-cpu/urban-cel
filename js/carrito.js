@@ -17,8 +17,6 @@ const saveCart = (cart) => {
   localStorage.setItem('urbanCelCart', JSON.stringify(cart));
 };
 
-const getCartImage = (item) => item.image || item.icon || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80';
-
 const renderCartItems = () => {
   const container = document.getElementById('cartItems');
   if (!container) return;
@@ -37,7 +35,7 @@ const renderCartItems = () => {
       (item) => `
         <article class="cart-item">
           <div class="cart-item-thumb">
-            <img src="${getCartImage(item)}" alt="${item.name}" />
+            <img src="${item.image}" alt="${item.name}" />
           </div>
           <div>
             <h3>${item.name}</h3>
@@ -67,20 +65,14 @@ const renderCartItems = () => {
       const target = cartItems.find((entry) => entry.id === Number(button.dataset.id));
       if (!target) return;
 
-      if (button.dataset.action === 'increase') {
-        target.quantity += 1;
-      }
-
-      if (button.dataset.action === 'decrease') {
-        target.quantity -= 1;
-      }
+      if (button.dataset.action === 'increase') target.quantity += 1;
+      if (button.dataset.action === 'decrease') target.quantity -= 1;
 
       const nextCart = cartItems.filter((entry) => entry.quantity > 0);
       saveCart(nextCart);
       renderCartItems();
       document.querySelectorAll('#cartCount').forEach((element) => {
-        const count = nextCart.reduce((sum, item) => sum + item.quantity, 0);
-        element.textContent = count;
+        element.textContent = nextCart.reduce((sum, item) => sum + item.quantity, 0);
       });
     });
   });
@@ -91,17 +83,15 @@ const renderCartItems = () => {
       saveCart(nextCart);
       renderCartItems();
       document.querySelectorAll('#cartCount').forEach((element) => {
-        const count = nextCart.reduce((sum, item) => sum + item.quantity, 0);
-        element.textContent = count;
+        element.textContent = nextCart.reduce((sum, item) => sum + item.quantity, 0);
       });
     });
   });
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const cartCount = document.querySelectorAll('#cartCount');
   const total = getCart().reduce((sum, item) => sum + item.quantity, 0);
-  cartCount.forEach((item) => {
+  document.querySelectorAll('#cartCount').forEach((item) => {
     item.textContent = total;
   });
 

@@ -16,7 +16,7 @@ const products = [
     rating: 4.7,
     price: 600000,
     description: 'Pantalla amplia, batería duradera y excelente experiencia diaria.',
-    image: 'https://cdn.droidchart.com/p/82/8282/honor-x8a-crt-lx1-1.jpg',
+    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=80',
     featured: true,
   },
   {
@@ -26,7 +26,7 @@ const products = [
     rating: 4.6,
     price: 520000,
     description: 'Un celular confiable con gran pantalla y batería para todo el día.',
-    image: 'https://hartunning.com.mx/wp-content/uploads/2024/05/01-SAMSUNG-A15-modelos-SM-A155MN.webp',
+    image: 'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=900&q=80',
     featured: true,
   },
   {
@@ -36,7 +36,7 @@ const products = [
     rating: 4.6,
     price: 590000,
     description: 'Diseño moderno, buen rendimiento y almacenamiento para tus aplicaciones.',
-    image: 'https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/a20-a3x/listpage/427-600-blue.png',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80',
     featured: true,
   },
   {
@@ -46,12 +46,10 @@ const products = [
     rating: 4.9,
     price: 1390000,
     description: 'Consola compacta de nueva generación para disfrutar tus juegos favoritos.',
-    image: 'https://www.presse-citron.net/app/uploads/2021/11/xbox-series-s-microsoft.png',
+    image: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=900&q=80',
     featured: true,
   },
 ];
-
-const getProductImage = (product) => product.image || product.icon || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80';
 
 const currency = new Intl.NumberFormat('es-CO', {
   style: 'currency',
@@ -88,8 +86,9 @@ const addToCart = (productId) => {
 
   if (existing) {
     existing.quantity += 1;
+    existing.image = product.image;
   } else {
-    cart.push({ ...product, quantity: 1, image: getProductImage(product) });
+    cart.push({ ...product, quantity: 1 });
   }
 
   setCart(cart);
@@ -100,7 +99,7 @@ const addToCart = (productId) => {
 const renderProductCard = (product) => `
   <article class="product-card" data-id="${product.id}">
     <div class="product-image">
-      <img src="${getProductImage(product)}" alt="${product.name}" />
+      <img src="${product.image}" alt="${product.name}" />
     </div>
     <div class="product-body">
       <div class="product-topline">
@@ -157,7 +156,6 @@ const setupFilters = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  localStorage.removeItem('urbanCelCart');
   updateCartCount();
   renderFeaturedProducts();
   renderCatalogProducts();
