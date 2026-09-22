@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Cel | Inicio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">U</span>
+          <span>Urban Cel</span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="index.html" class="active">Inicio</a>
+          <a href="productos.html">Productos</a>
+          <a href="accesorios.html">Accesorios</a>
+          <a href="nosotros.html">Sobre nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="carrito.html" class="cart-link" aria-label="Carrito de compras">
+            <span>🛒</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </a>
+          <div class="user-menu">
+            <span class="user-pill" data-user-label>Usuario</span>
+            <button class="btn btn-light btn-small" id="logoutBtn">Salir</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Lo último en tecnología</p>
+            <h1>Tecnología que se adapta a ti</h1>
+            <p>
+              Descubre smartphones, accesorios y gadgets diseñados para acompañarte en cada momento.
+            </p>
+            <div class="hero-actions">
+              <a href="productos.html" class="btn btn-primary">Ver productos</a>
+              <a href="contacto.html" class="btn btn-secondary">Hablar con asesor</a>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong>+3.000</strong>
+                <span>Clientes</span>
+              </div>
+              <div>
+                <strong>120+</strong>
+                <span>Productos</span>
+              </div>
+              <div>
+                <strong>24h</strong>
+                <span>Envío rápido</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="device-showcase">
+              <div class="phone-frame">
+                <div class="screen-glow"></div>
+              </div>
+              <div class="floating-card card-one">
+                <span>iPhone 15 Pro</span>
+                <strong>$1,299</strong>
+              </div>
+              <div class="floating-card card-two">
+                <span>AirPods Pro</span>
+                <strong>$219</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Destacados</p>
+            <h2>Productos más vendidos</h2>
+          </div>
+          <a href="productos.html" class="text-link">Ver catálogo</a>
+        </div>
+        <div id="featuredProducts" class="product-grid"></div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-head centered">
+            <div>
+              <p class="eyebrow">¿Por qué Urban Cel?</p>
+              <h2>Experiencia tecnológica sin complicaciones</h2>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <h3>Entrega rápida</h3>
+              <p>Recibe tus productos en tiempo récord con soporte confiable.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">🛡️</div>
+              <h3>Garantía</h3>
+              <p>Productos con respaldo y atención especializada para cada compra.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">💬</div>
+              <h3>Asesoría</h3>
+              <p>Te ayudamos a elegir el mejor equipo según tus necesidades.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Urban Cel</h3>
+          <p>Lo mejor en celulares y accesorios tecnológicos.</p>
+        </div>
+        <div>
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="accesorios.html">Accesorios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>WhatsApp: +57 315 000 0000</li>
+            <li>correo@urbancel.com</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

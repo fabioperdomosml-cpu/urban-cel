@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Cel | Contacto</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">U</span>
+          <span>Urban Cel</span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+          <a href="accesorios.html">Accesorios</a>
+          <a href="nosotros.html">Sobre nosotros</a>
+          <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="carrito.html" class="cart-link" aria-label="Carrito de compras">
+            <span>🛒</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </a>
+          <div class="user-menu">
+            <span class="user-pill" data-user-label>Usuario</span>
+            <button class="btn btn-light btn-small" id="logoutBtn">Salir</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="container contact-section">
+        <div class="contact-card">
+          <p class="eyebrow">Contacto</p>
+          <h1>Hablemos</h1>
+          <form id="contactForm" class="contact-form">
+            <div class="form-grid">
+              <label>
+                <span>Nombre</span>
+                <input type="text" id="contactName" placeholder="Tu nombre" required />
+              </label>
+              <label>
+                <span>Correo</span>
+                <input type="email" id="contactEmail" placeholder="tucorreo@email.com" required />
+              </label>
+              <label>
+                <span>Teléfono</span>
+                <input type="tel" id="contactPhone" placeholder="300 000 0000" required />
+              </label>
+              <label>
+                <span>Asunto</span>
+                <input type="text" id="contactSubject" placeholder="Consulta" required />
+              </label>
+            </div>
+
+            <label>
+              <span>Mensaje</span>
+              <textarea id="contactMessage" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+            </label>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+
+        <aside class="info-card">
+          <h3>Urban Cel</h3>
+          <p>Atención rápida, asesoría personalizada y soluciones tecnológicas para cada necesidad.</p>
+          <ul>
+            <li>📍 Bogotá, Colombia</li>
+            <li>📞 +57 315 000 0000</li>
+            <li>✉️ correo@urbancel.com</li>
+            <li>💬 WhatsApp</li>
+            <li>📱 Instagram / Facebook</li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Urban Cel</h3>
+          <p>Contacto directo con nuestro equipo.</p>
+        </div>
+        <div>
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="accesorios.html">Accesorios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>WhatsApp: +57 315 000 0000</li>
+            <li>correo@urbancel.com</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

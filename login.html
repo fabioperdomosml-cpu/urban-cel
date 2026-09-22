@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Cel | Iniciar sesión</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="auth-page">
+    <div class="auth-shell">
+      <div class="auth-card">
+        <div class="brand-block">
+          <div class="brand-mark">U</div>
+          <div>
+            <p class="eyebrow">Tienda tecnológica</p>
+            <h1>Urban Cel</h1>
+          </div>
+        </div>
+
+        <h2>Iniciar sesión</h2>
+        <p class="subtext">Accede a tu cuenta para explorar productos y comprar con rapidez.</p>
+
+        <form id="loginForm" class="auth-form" novalidate>
+          <label>
+            <span>Correo electrónico o usuario</span>
+            <input id="email" type="email" placeholder="ejemplo@urbancel.com" required />
+          </label>
+
+          <label>
+            <span>Contraseña</span>
+            <input id="password" type="password" placeholder="••••••••" required />
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+        </form>
+
+        <div class="auth-links">
+          <button type="button" class="link-btn" id="createAccountBtn">Crear cuenta</button>
+          <button type="button" class="link-btn" id="recoverPasswordBtn">¿Olvidaste tu contraseña?</button>
+        </div>
+      </div>
+
+      <div class="auth-visual">
+        <div class="phone-card">
+          <div class="mini-surface"></div>
+          <div class="mini-badges">
+            <span>5G</span>
+            <span>128GB</span>
+            <span>OLED</span>
+          </div>
+        </div>
+        <div class="floating-tag tag-one">Tecnología</div>
+        <div class="floating-tag tag-two">Accesorios</div>
+      </div>
+    </div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

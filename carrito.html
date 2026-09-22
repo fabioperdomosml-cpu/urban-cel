@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Cel | Carrito</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">U</span>
+          <span>Urban Cel</span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+          <a href="accesorios.html">Accesorios</a>
+          <a href="nosotros.html">Sobre nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="carrito.html" class="cart-link" aria-label="Carrito de compras">
+            <span>🛒</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </a>
+          <div class="user-menu">
+            <span class="user-pill" data-user-label>Usuario</span>
+            <button class="btn btn-light btn-small" id="logoutBtn">Salir</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="container cart-section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Tu compra</p>
+            <h1>Carrito de compras</h1>
+          </div>
+          <a href="productos.html" class="text-link">Continuar comprando</a>
+        </div>
+
+        <div class="cart-layout">
+          <div id="cartItems" class="cart-items"></div>
+
+          <aside class="summary-card">
+            <h3>Resumen</h3>
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <strong id="subtotalPrice">$0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Envío</span>
+              <strong>$0</strong>
+            </div>
+            <div class="summary-row total-row">
+              <span>Total</span>
+              <strong id="totalPrice">$0</strong>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkoutBtn">Proceder al pedido</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Urban Cel</h3>
+          <p>Tu carrito listo para comprar.</p>
+        </div>
+        <div>
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="accesorios.html">Accesorios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>WhatsApp: +57 315 000 0000</li>
+            <li>correo@urbancel.com</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/carrito.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
