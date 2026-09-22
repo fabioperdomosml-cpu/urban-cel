@@ -6,7 +6,7 @@ const products = [
     rating: 4.8,
     price: 1200000,
     description: 'Rendimiento potente, cámara avanzada y diseño elegante.',
-    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80',
+    image: 'https://th.bing.com/th/id/R.6f741d98cbfb8c15b0f95e217b729867?rik=u4%2fDe%2b%2fYomNfJw&riu=http%3a%2f%2fcatalogo.claro.com.ec%2fuploads%2fimgs%2fproductos%2fiphone-13-128gb%2fazul%2fzoom%2f01-iphone-13-128gb-azul-front.png&ehk=Yfb%2b6%2f4wBEtpiaUVblK7iJvkpfhGr%2f4uQqIOWqVRiRg%3d&risl=&pid=ImgRaw&r=0',
     featured: true,
   },
   {
