@@ -1,83 +1,53 @@
 const products = [
   {
     id: 1,
-    name: 'iPhone 15 Pro',
+    name: 'iPhone 13',
     category: 'Celulares',
-    rating: 4.9,
-    price: 1299,
-    description: 'Pantalla Super Retina, chip A17 Pro y cámara pro avanzada.',
+    rating: 4.8,
+    price: 1200000,
+    description: 'Rendimiento potente, cámara avanzada y diseño elegante.',
     icon: '📱',
     featured: true,
   },
   {
     id: 2,
-    name: 'Samsung Galaxy S24',
+    name: 'Honor X8a',
     category: 'Celulares',
-    rating: 4.8,
-    price: 1099,
-    description: 'Potencia, creatividad y diseño premium para cada día.',
+    rating: 4.7,
+    price: 600000,
+    description: 'Pantalla amplia, batería duradera y excelente experiencia diaria.',
     icon: '📱',
     featured: true,
   },
   {
     id: 3,
-    name: 'AirPods Pro',
-    category: 'Audífonos',
-    rating: 4.9,
-    price: 219,
-    description: 'Audio inmersivo con cancelación activa de ruido.',
-    icon: '🎧',
+    name: 'Samsung Galaxy A05s',
+    category: 'Celulares',
+    rating: 4.6,
+    price: 520000,
+    description: 'Un celular confiable con gran pantalla y batería para todo el día.',
+    icon: '📱',
     featured: true,
   },
   {
     id: 4,
-    name: 'Cargador USB-C 65W',
-    category: 'Cargadores',
-    rating: 4.7,
-    price: 79,
-    description: 'Carga rápida y compatible con varios dispositivos.',
-    icon: '🔌',
-    featured: false,
-  },
-  {
-    id: 5,
-    name: 'Cable USB-C a USB-C',
-    category: 'Cables',
+    name: 'OPPO A20',
+    category: 'Celulares',
     rating: 4.6,
-    price: 29,
-    description: 'Cable duradero con transferencia rápida y conexión estable.',
-    icon: '🔋',
-    featured: false,
-  },
-  {
-    id: 6,
-    name: 'Funda Armor X',
-    category: 'Fundas',
-    rating: 4.8,
-    price: 49,
-    description: 'Protección resistente y estilo minimalista.',
-    icon: '🧤',
-    featured: false,
-  },
-  {
-    id: 7,
-    name: 'Smartwatch Urban Fit',
-    category: 'Accesorios tecnológicos',
-    rating: 4.7,
-    price: 249,
-    description: 'Monitorea salud, actividad y notificaciones en tiempo real.',
-    icon: '⌚',
+    price: 580000,
+    description: 'Diseño moderno, buen rendimiento y almacenamiento para tus aplicaciones.',
+    icon: '📱',
     featured: true,
   },
   {
-    id: 8,
-    name: 'Soporte para auto',
-    category: 'Accesorios tecnológicos',
-    rating: 4.6,
-    price: 39,
-    description: 'Mantén tu teléfono seguro y visible al conducir.',
-    icon: '📲',
-    featured: false,
+    id: 5,
+    name: 'Xbox Series S',
+    category: 'Consolas',
+    rating: 4.9,
+    price: 1390000,
+    description: 'Consola compacta de nueva generación para disfrutar tus juegos favoritos.',
+    icon: '🎮',
+    featured: true,
   },
 ];
 
@@ -147,8 +117,7 @@ const renderFeaturedProducts = () => {
   const featuredContainer = document.getElementById('featuredProducts');
   if (!featuredContainer) return;
 
-  const featured = products.filter((product) => product.featured).slice(0, 4);
-  featuredContainer.innerHTML = featured.map(renderProductCard).join('');
+  featuredContainer.innerHTML = products.map(renderProductCard).join('');
   bindAddToCartButtons();
 };
 
@@ -163,18 +132,6 @@ const renderCatalogProducts = (filter = 'todos') => {
   catalogContainer.innerHTML = filteredProducts.length
     ? filteredProducts.map(renderProductCard).join('')
     : '<div class="empty-state">No hay productos disponibles en esta categoría.</div>';
-
-  bindAddToCartButtons();
-};
-
-const renderAccessoryProducts = () => {
-  const accessoryContainer = document.getElementById('accessoryProducts');
-  if (!accessoryContainer) return;
-
-  const accessories = products.filter((product) => product.category !== 'Celulares');
-  accessoryContainer.innerHTML = accessories.length
-    ? accessories.map(renderProductCard).join('')
-    : '<div class="empty-state">Próximamente más accesorios.</div>';
 
   bindAddToCartButtons();
 };
@@ -199,6 +156,5 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCartCount();
   renderFeaturedProducts();
   renderCatalogProducts();
-  renderAccessoryProducts();
   setupFilters();
 });
