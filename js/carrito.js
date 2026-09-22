@@ -17,6 +17,8 @@ const saveCart = (cart) => {
   localStorage.setItem('urbanCelCart', JSON.stringify(cart));
 };
 
+const getCartImage = (item) => item.image || item.icon || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80';
+
 const renderCartItems = () => {
   const container = document.getElementById('cartItems');
   if (!container) return;
@@ -35,7 +37,7 @@ const renderCartItems = () => {
       (item) => `
         <article class="cart-item">
           <div class="cart-item-thumb">
-            <img src="${item.image}" alt="${item.name}" />
+            <img src="${getCartImage(item)}" alt="${item.name}" />
           </div>
           <div>
             <h3>${item.name}</h3>

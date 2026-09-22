@@ -51,6 +51,8 @@ const products = [
   },
 ];
 
+const getProductImage = (product) => product.image || product.icon || 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80';
+
 const currency = new Intl.NumberFormat('es-CO', {
   style: 'currency',
   currency: 'COP',
@@ -87,7 +89,7 @@ const addToCart = (productId) => {
   if (existing) {
     existing.quantity += 1;
   } else {
-    cart.push({ ...product, quantity: 1 });
+    cart.push({ ...product, quantity: 1, image: getProductImage(product) });
   }
 
   setCart(cart);
@@ -98,7 +100,7 @@ const addToCart = (productId) => {
 const renderProductCard = (product) => `
   <article class="product-card" data-id="${product.id}">
     <div class="product-image">
-      <img src="${product.image}" alt="${product.name}" />
+      <img src="${getProductImage(product)}" alt="${product.name}" />
     </div>
     <div class="product-body">
       <div class="product-topline">
@@ -155,6 +157,7 @@ const setupFilters = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  localStorage.removeItem('urbanCelCart');
   updateCartCount();
   renderFeaturedProducts();
   renderCatalogProducts();
