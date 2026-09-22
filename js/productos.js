@@ -34,7 +34,7 @@ const products = [
     name: 'OPPO A20',
     category: 'Celulares',
     rating: 4.6,
-    price: 580000,
+    price: 590000,
     description: 'Diseño moderno, buen rendimiento y almacenamiento para tus aplicaciones.',
     icon: '📱',
     featured: true,
