@@ -36,7 +36,7 @@ const products = [
     rating: 4.6,
     price: 590000,
     description: 'Diseño moderno, buen rendimiento y almacenamiento para tus aplicaciones.',
-    image: 'https://www.falabella.com.co/falabella-co/product/151408981/celular-oppo-a20-4gb-ram-128gb-azul/151408982',
+    image: 'https://www.carulla.com/celular-oppo-a20-128-gb-4-gb-ram-cafe-3188387/p?srsltid=AU7gw4U0LaJ1HCoDpLY4xICIx5m1wEcdsRQ03wttBCsOVAGnRHk25p5r',
     featured: true,
   },
   {
