@@ -16,7 +16,7 @@ const products = [
     rating: 4.7,
     price: 600000,
     description: 'Pantalla amplia, batería duradera y excelente experiencia diaria.',
-    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=900&q=80',
+    image: 'https://www.honor.com/co/phones/honor-x8a/spec/',
     featured: true,
   },
   {
