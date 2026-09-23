@@ -26,7 +26,7 @@ const products = [
     rating: 4.6,
     price: 520000,
     description: 'Un celular confiable con gran pantalla y batería para todo el día.',
-    image: 'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=900&q=80',
+    image: 'https://www.smart-gsm.com/moviles/samsung-galaxy-a05s',
     featured: true,
   },
   {
