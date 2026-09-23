@@ -36,7 +36,7 @@ const products = [
     rating: 4.6,
     price: 590000,
     description: 'Diseño moderno, buen rendimiento y almacenamiento para tus aplicaciones.',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80',
+    image: 'https://www.falabella.com.co/falabella-co/product/151408981/celular-oppo-a20-4gb-ram-128gb-azul/151408982',
     featured: true,
   },
   {
