@@ -46,7 +46,7 @@ const products = [
     rating: 4.9,
     price: 1390000,
     description: 'Consola compacta de nueva generación para disfrutar tus juegos favoritos.',
-    image: 'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=900&q=80',
+    image: 'https://www.exito.com/consola-series-s-xbox-rrs-00004-3001513/p',
     featured: true,
   },
 ];
